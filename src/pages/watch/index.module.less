@@ -1,0 +1,223 @@
+.watch {
+  height: 100%;
+  width: 100%;
+
+  :global(.am-list-body) {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar {
+    background: #fff;
+  }
+
+  .listviewLoad {
+    height: 24px;
+    line-height: 24px;
+    color: #3b8fe2;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .emptyData {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #fff;
+
+    img {
+      height: 133px;
+    }
+
+    span {
+      color: #3b8fe2;
+    }
+  }
+
+  .rowBody {
+    display: flex;
+    height: 55px;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+    border-top: 1px solid hsla(0, 0%, 100%, 0.5);
+    background: rgba(0, 0, 0, 0.2);
+    align-items: center;
+    position: relative;
+
+    .serial {
+      font-size: 13px;
+      width: 100px;
+      height: 20px;
+      line-height: 20px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -50px;
+      text-align: center;
+      color: #fff;
+      font-family: "number-font";
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-indent: 2px;
+    }
+
+    .left {
+      height: 55px;
+      flex: 1 1;
+
+      .line {
+        display: flex;
+        height: 100%;
+        position: relative;
+
+        .firstTips {
+          width: 100%;
+          height: 55px;
+          position: absolute;
+          overflow: hidden;
+          text-align: center;
+
+          sup {
+            width: 55px;
+            padding: 8px;
+            position: absolute;
+            font-size: 10px;
+            white-space: nowrap;
+            top: 5px;
+            left: -15px;
+            transform: rotate(-45deg);
+            color: #fff;
+          }
+        }
+
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          padding: 0 5px 0 23px;
+        }
+
+        .content {
+          width: 100%;
+          height: 100%;
+          padding: 5px 2px;
+
+          .title {
+            width: 100%;
+            height: 24px;
+            line-height: 24px;
+            font-size: 14px;
+            color: #0f0;
+          }
+
+          .desc {
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            color: #e6e600;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .right {
+      height: 55px;
+      flex: 1 1;
+
+      .line {
+        display: flex;
+        height: 100%;
+        position: relative;
+        padding-right: 18px;
+
+        .firstTips {
+          width: 100%;
+          height: 55px;
+          position: absolute;
+          overflow: hidden;
+          text-align: center;
+
+          sup {
+            width: 55px;
+            padding: 8px;
+            position: absolute;
+            font-size: 10px;
+            white-space: nowrap;
+            top: 5px;
+            right: -15px;
+            transform: rotate(45deg);
+            color: #fff;
+          }
+        }
+
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          padding: 0 5px;
+        }
+
+        .content {
+          width: 100%;
+          height: 100%;
+          padding: 5px 2px;
+          text-align: right;
+
+          .title {
+            width: 100%;
+            height: 24px;
+            line-height: 24px;
+            font-size: 14px;
+            color: #0f0;
+          }
+
+          .desc {
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            color: #e6e600;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  .page {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    z-index: 999;
+    border-radius: 50%;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 0 5px 3px #bbb;
+
+    div {
+      width: 64%;
+      left: 18%;
+      position: absolute;
+      top: 50%;
+      border-top: 1px solid #fff;
+    }
+
+    span {
+      flex: 1 1;
+      text-align: center;
+      color: #0f0;
+      font-size: 10px;
+      display: inline-block;
+      height: 17px;
+      line-height: 19px;
+    }
+  }
+}

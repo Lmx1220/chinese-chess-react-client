@@ -1,0 +1,194 @@
+/**
+ * 第一种按钮
+ * 天蓝色
+ */
+.normal {
+  border: 1px solid #a8ecff;
+  backdrop-filter: blur(10px);
+  transform: skewX(-10deg);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px 8px 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-shadow: 0 0 6px #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-indent: 1px;
+  animation: breath2 2s 0.5s infinite alternate;
+  // transition: transform 0.2s ease;
+  background-image: linear-gradient(to bottom, rgba(48, 138, 255, 0.4), rgba(29, 96, 240, 0.5));
+  box-shadow: 0 0 55px rgba(48, 138, 255, 0.5), 0 5px 20px rgba(48, 138, 255, 0.5), inset 0 1px #ffeca8, inset 0 -1px #ffeca8;
+  color: #000;
+}
+
+.normal:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 89%;
+  height: 73%;
+  animation: breath 2s infinite alternate;
+  left: 5%;
+  top: 12%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px 4px;
+  box-shadow: inset 0 0 25px 0 #a8ecff;
+  z-index: 99
+}
+
+.normal:active {
+  box-shadow: 0 0 65px rgba(48, 138, 255, 0.8), 0 5px 20px rgba(48, 138, 255, 0.8), inset 0 1px #a8ecff, inset 0 -1px #a8ecff;
+}
+
+.normal:active:after {
+  box-shadow: inset 0 0 50px 0 #a8ecff;
+}
+
+/**
+ * 第二种按钮
+ * 警告色
+ */
+.danger {
+  border: 1px solid #ffeca8;
+  backdrop-filter: blur(10px);
+  transform: skewX(-10deg);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px 8px 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-shadow: 0 0 6px #fff;
+  text-transform: uppercase;
+  animation: breath2 2s 0.5s infinite alternate;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-indent: 1px;
+  background-image: linear-gradient(to bottom, rgba(255, 138, 48, 0.6), rgba(240, 96, 29, 0.6));
+  box-shadow: 0 0 55px rgba(255, 138, 48, 0.6), 0 5px 20px rgba(255, 138, 48, 0.6), inset 0 1px #ffeca8, inset 0 -1px #ffeca8;
+  color: rgba(255, 236, 268, 1);
+}
+
+.danger:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 89%;
+  height: 73%;
+  animation: breath 2s infinite alternate;
+  left: 5%;
+  top: 12%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px 4px;
+  box-shadow: inset 0 0 25px 0 #ffeca8;
+  z-index: 99;
+}
+
+.danger:active {
+  box-shadow: 0 0 65px rgba(255, 138, 48, 0.8), 0 5px 20px rgba(255, 138, 48, 0.8), inset 0 1px #ffeca8, inset 0 -1px #ffeca8;
+}
+
+.danger:active:after {
+  box-shadow: inset 0 0 50px 0 #ffeca8;
+}
+
+// 禁用效果
+.normal[disabled] {
+  filter: grayscale(1);
+  cursor: not-allowed;
+}
+
+.normal[disabled]:after {
+  filter: grayscale(1);
+}
+
+// 禁用效果
+.danger[disabled] {
+  filter: grayscale(1);
+  cursor: not-allowed;
+}
+
+.danger[disabled]:after {
+  filter: grayscale(1);
+}
+
+
+/**
+ * 第三种按钮
+ * 天蓝色-四角无拉伸
+ */
+.square {
+  border: 1px solid #a8ecff;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px 8px 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-shadow: 0 0 6px #fff;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-indent: 1px;
+  background-image: linear-gradient(to bottom, rgba(48, 138, 255, 0.4), rgba(29, 96, 240, 0.5));
+  box-shadow: 0 0 55px rgba(48, 138, 255, 0.5), 0 5px 20px rgba(48, 138, 255, 0.5), inset 0 1px #ffeca8, inset 0 -1px #ffeca8;
+  color: #000;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 84%;
+  height: 74%;
+  left: 7%;
+  top: 12%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px 4px;
+  box-shadow: inset 0 0 25px 0 #a8ecff;
+  z-index: 99
+}
+
+.square:active {
+  box-shadow: 0 0 65px rgba(48, 138, 255, 0.8), 0 5px 20px rgba(48, 138, 255, 0.8), inset 0 1px #a8ecff, inset 0 -1px #a8ecff;
+}
+
+.square:active:after {
+  box-shadow: inset 0 0 50px 0 #a8ecff;
+}
+
+
+// 动画效果
+@keyframes breath {
+  0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0.95);
+  }
+}
+
+@keyframes breath2 {
+  0% {
+    transform: skewX(-10deg) scaleX(1);
+  }
+
+  100% {
+    transform: skewX(-10deg) scaleX(0.95);
+  }
+}

@@ -1,0 +1,473 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .player {
+    width: 345px;
+    height: 534px;
+
+    .boardPlaceholder {
+      width: 345px;
+      height: 382px;
+      position: relative;
+
+      .enemyMsg {
+        position: absolute;
+        left: 0;
+        top: 15px;
+        z-index: 10;
+        text-align: center;
+        padding: 0 10px;
+        width: 100%;
+        pointer-events: auto;
+
+        span {
+          background: rgba(0, 0, 0, 0.8);
+          color: #fff;
+          font-size: 14px;
+          height: 100%;
+          padding: 5px 10px;
+          min-width: 32px;
+          display: inline-block;
+          border-radius: 5px;
+          text-align: left;
+        }
+      }
+
+      .userMsg {
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+        z-index: 10;
+        text-align: center;
+        padding: 0 10px;
+        width: 100%;
+        pointer-events: auto;
+
+        span {
+          background: rgba(0, 0, 0, 0.8);
+          color: #fff;
+          font-size: 14px;
+          height: 100%;
+          padding: 5px 10px;
+          min-width: 32px;
+          display: inline-block;
+          border-radius: 5px;
+          text-align: left;
+        }
+      }
+    }
+
+    .user {
+      height: 50px;
+      width: 100%;
+
+      .icon {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+
+        div {
+          width: 50px;
+          height: 50px;
+          position: relative;
+
+          img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            border: 3px solid #eee;
+          }
+
+          .head {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .floor {
+        width: 100%;
+        height: 50px;
+        padding: 0 4px;
+        position: relative;
+
+        button {
+          width: 100%;
+          height: 100%;
+          font-size: 13px;
+        }
+
+        .badge {
+          position: absolute;
+          right: 5px;
+          top: -5px;
+
+          :global(.adm-badge-content) {
+            font-size: 11px;
+            padding: 2px 7px;
+          }
+        }
+      }
+
+      .body {
+        background: rgba(0, 0, 0, 0.7);
+        height: 50px;
+        font-size: 15px;
+        text-align: center;
+        border-radius: 3px;
+
+        .name {
+          margin-top: 4px;
+          line-height: 21px;
+          color: #47fc47;
+        }
+
+        .score {
+          margin-top: 4px;
+          line-height: 21px;
+          color: gold;
+        }
+
+        .allTime, .stepTime {
+          line-height: 21px;
+          font-size: 13px;
+          color: #ff0;
+
+          span {
+            color: #fff;
+            padding: 0 4px;
+          }
+        }
+      }
+    }
+
+    .enemy {
+      height: 50px;
+      width: 100%;
+
+      .icon {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+
+        div {
+          width: 50px;
+          height: 50px;
+          position: relative;
+
+          img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            border: 3px solid #eee;
+          }
+
+          .head {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .floor {
+        width: 100%;
+        height: 50px;
+        padding: 0 4px;
+        position: relative;
+
+        button {
+          width: 100%;
+          height: 100%;
+          font-size: 13px;
+        }
+      }
+
+      .body {
+        background: rgba(0, 0, 0, 0.7);
+        height: 50px;
+        font-size: 15px;
+        text-align: center;
+        border-radius: 3px;
+
+        .name {
+          margin-top: 4px;
+          line-height: 21px;
+          color: #47fc47;
+        }
+
+        .score {
+          margin-top: 4px;
+          line-height: 21px;
+          color: gold;
+        }
+
+        .allTime, .stepTime {
+          line-height: 21px;
+          font-size: 13px;
+          color: #ff0;
+
+          span {
+            color: #fff;
+            position: relative;
+            padding: 0 4px;
+          }
+
+          .timeout:after {
+            content: "";
+            border-radius: 2px;
+            box-shadow: inset 0 0 8px red;
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: timeout 1s infinite;
+          }
+        }
+      }
+    }
+
+    .watchMsg {
+      width: 100%;
+      height: 25px;
+      font-size: 12px;
+      color: #00f;
+      overflow: hidden;
+
+      div {
+        display: inline-block;
+        height: 25px;
+        line-height: 25px;
+        white-space: nowrap;
+        animation-name: textFrame;
+        animation-duration: 10s;
+        animation-delay: 3s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+      }
+    }
+
+    .watchMsgPlaceholder {
+      width: 100%;
+      height: 25px;
+    }
+  }
+
+  .msgWindow {
+    width: 322px;
+    height: 336px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    margin-top: -168px;
+    margin-left: -161px;
+    border-radius: 8px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 35px rgba(105, 100, 105, 0.5);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+
+    .title {
+      width: 100%;
+      height: 46px;
+      padding-left: 4px;
+      background: #fff;
+      display: flex;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+
+      div {
+        width: 28px;
+        margin: 10px 0;
+        background-image: url(@/assets/pk.png);
+        background-size: cover;
+        border: 1px solid #fff;
+      }
+
+      span {
+        width: 100%;
+        line-height: 25px;
+        margin: 10px 0;
+        letter-spacing: 1px;
+        font-size: 18px;
+        color: #000;
+        display: block;
+        border: 1px solid #fff;
+      }
+    }
+
+    .content {
+      .list {
+        margin: 0;
+        height: 232px;
+        overflow-y: scroll;
+        padding: 0 14px;
+
+        .colTitle {
+          color: #e6e600;
+        }
+
+        .colContent {
+          color: #00f400;
+        }
+
+        p {
+          margin: 7px 0;
+          font-size: 15px;
+          text-align: left;
+
+          .self {
+            color: #00f400;
+          }
+
+          .people {
+            color: #ff8c00;
+          }
+
+          .system {
+            color: #f03;
+          }
+        }
+
+        &:after {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+
+      .floor {
+        padding: 7px 14px;
+
+        button {
+          width: 100%;
+          height: 42px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .watch {
+    width: 322px;
+    height: 336px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 8px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 35px rgba(105, 100, 105, 0.5);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+
+    .title {
+      width: 100%;
+      height: 46px;
+      padding-left: 4px;
+      background: #fff;
+      display: flex;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+
+      div {
+        width: 28px;
+        margin: 10px 0;
+        background-image: url(@/assets/pk.png);
+        background-size: cover;
+        border: 1px solid #fff;
+      }
+
+      span {
+        width: 100%;
+        line-height: 26px;
+        margin: 10px 0;
+        letter-spacing: 1px;
+        font-size: 18px;
+        color: #000;
+        display: block;
+        border: 1px solid #fff;
+      }
+    }
+
+    .content {
+      .list {
+        margin: 0;
+        height: 232px;
+        overflow-y: scroll;
+        padding: 0 14px;
+
+        .row {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          height: 42px;
+          color: #fff;
+          font-size: 14px;
+          border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+          cursor: pointer;
+
+          .colTitle {
+            color: #e6e600;
+          }
+
+          .colContent {
+            width: 100%;
+            color: #00f400;
+            text-align: left;
+            padding-left: 15px;
+          }
+        }
+      }
+
+      .floor {
+        padding: 7px 14px;
+
+        button {
+          width: 100%;
+          height: 42px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes timeout {
+  0% {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes textFrame {
+  0% {
+    transform: translateX(100%);
+    -webkit-transform: translateX(0);
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}

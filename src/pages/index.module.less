@@ -1,0 +1,104 @@
+.bg {
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(90deg, rgba(228, 190, 145, .2), rgba(246, 219, 234, .8), rgba(178, 206, 209, .8)) fixed;
+  overflow: hidden;
+}
+
+.invite{
+  padding: 0;
+
+  :global(.adm-list-item-content-main) {
+    padding: 5px 0;
+  }
+
+  :global(.adm-list-item-content) {
+    &:first-child {
+      border-top: none;
+    }
+
+    border-bottom: 1px solid #eee;
+  }
+
+  :global(.adm-list-body), :global(.adm-list-body-inner), :global(.adm-list-default) {
+    height: 100%;
+  }
+
+  :global(.adm-list-body-inner) {
+    overflow: scroll;
+  }
+
+  :global(.adm-list-item-content-extra) {
+    padding-left: 0;
+  }
+
+  :global(.adm-card-body) {
+    padding: 8px 0;
+  }
+
+  .userName {
+    font-size: 15px;
+  }
+
+  .btn {
+    display: flex;
+    width: 120px;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+      height: 28px;
+    }
+  }
+
+  .desc {
+    text-align: left;
+    font-size: 13px;
+    height: 24px;
+    line-height: 24px;
+
+    .score {
+      width: fit-content;
+      color: #ff7000;
+
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+
+.version {
+  .title {
+    height: 28px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+
+  ul {
+    list-style: decimal;
+    margin: 0;
+    padding-left: 25px;
+    height: fit-content;
+
+    li {
+      font-size: 14px;
+      word-break: break-all;
+
+      span {
+        width: fit-content;
+        height: fit-content;
+        text-align: left;
+        display: block;
+        margin: 2px 0;
+      }
+    }
+  }
+
+  .extend {
+    color: #0e80d2;
+    padding-left: 25px;
+    font-size: 14px;
+  }
+}

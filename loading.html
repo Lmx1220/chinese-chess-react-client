@@ -1,0 +1,47 @@
+<style>
+  #app {
+    height: 100%;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(90deg, rgba(228, 190, 145, .4), rgba(246, 219, 234, .8), #B2CED1) fixed;
+
+    .spin {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      img {
+        width: 68px;
+        height: 55px
+      }
+
+      span {
+        margin-top: 8px
+      }
+
+      .container {
+        height: 45px;
+        line-height: 45px;
+      }
+    }
+
+  }
+</style>
+
+<div id="globalLoadingId" class="background">
+  <div class="spin">
+    <img src="/loading.gif">
+    <span>Loading...</span>
+  </div>
+</div>

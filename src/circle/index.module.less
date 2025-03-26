@@ -1,0 +1,68 @@
+
+.cir1 {
+  font-family: "diy-font";
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  background-image: url(@/assets/black_cir.png);
+  background-size: 100% 100%;
+  text-align: center;
+  font-size: 72px;
+  z-index: 999;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+  padding: 10px 4px 0 0;
+  font-weight: 100;
+  color: #ec9f06;
+  text-shadow: 0 0 1px currentColor,
+    -1px 0 1px #220610,
+    0 -1px 2px #220610,
+    1px -2px 2px #220610,
+    2px -3px 2px #220610,
+    3px -4px 2px #220610,
+    4px -5px 2px #220610;
+  animation-name: circleFadeOut;
+}
+
+.cir2 {
+  font-family: "diy-font";
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  background-image: url(@/assets/black_cir.png);
+  background-size: 100% 100%;
+  text-align: center;
+  font-size: 40px;
+  z-index: 999;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+  padding: 10px 4px 0 0;
+  font-weight: 100;
+  color: #ec9f06;
+  text-shadow: 0 0 1px currentColor,
+  -1px 0 1px #220610,
+    0 -1px 2px #220610,
+    1px -2px 2px #220610,
+    2px -3px 2px #220610,
+    3px -4px 2px #220610,
+    4px -5px 2px #220610;
+  animation-name: circleFadeOut;
+}
+
+@keyframes circleFadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1)
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.5)
+  }
+}

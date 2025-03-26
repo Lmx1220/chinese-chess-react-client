@@ -1,0 +1,67 @@
+* {
+  touch-action: pan-y;
+}
+.player {
+  width: 344px;
+  height: 540px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  padding: 0 1px;
+
+  .user {
+    width: 100%;
+
+    .body {
+      background: hsla(0, 0%, 41.2%, 0.7);
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
+      font-size: 15px;
+      text-align: center;
+      padding: 4px;
+      border-radius: 3px;
+
+      .title {
+        height: 25px;
+        line-height: 25px;
+        color: #47fc47;
+      }
+
+      .placeholder {
+        font-weight: 700;
+        color: #47fc47;
+        height: 25px;
+      }
+
+      .step {
+        height: 25px;
+        line-height: 25px;
+        color: #fff;
+        font-size: 12px;
+      }
+
+      .date {
+        height: 25px;
+        line-height: 25px;
+        color: #ff0;
+        font-size: 12px;
+      }
+
+      .round {
+        height: 25px;
+        line-height: 25px;
+        color: #fff;
+        font-size: 12px;
+      }
+
+      .chessBook {
+        color: #fff;
+        height: 25px;
+        line-height: 25px;
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'diy-font';
+  src: url("./assets/font/方正字体.ttf");
+}
+
+@font-face {
+  font-family: 'number-font';
+  src: url("./assets/font/数字.ttf");
+}
+
+@font-face {
+  font-family: 'kaiti-font';
+  src: url("./assets/font/楷体.ttf");
+}
+
+* {
+  touch-action: pan-y;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  position: relative;
+  font-weight: 400;
+}
+
+/*样式覆盖*/
+.am-list-item .am-list-line .am-list-extra {
+  overflow: visible !important;
+}

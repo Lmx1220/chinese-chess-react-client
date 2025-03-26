@@ -1,0 +1,88 @@
+.loadingSpinner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  text-align: center;
+  z-index: 99999;
+}
+
+.alertText {
+  padding-top: 5px;
+  color: white;
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-clip: padding-box;
+  background-color: rgba(58, 58, 58, .9);
+  line-height: 20px;
+  min-width: 140px;
+  min-height: 60px;
+}
+
+.svgLoader {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  animation: rotate 2s infinite linear;
+  font-size: 30px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+circle {
+  fill: transparent;
+  stroke: #00abe4;
+  stroke-width: 0.07em;
+  stroke-dasharray: 2.3525em, 0.4705em;
+  animation: strokeDashArray 1.3s infinite linear, 24s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes strokeDashArray {
+  from {
+    stroke-dasharray: 2.3525em, 0.4705em;
+    stroke-dashoffset: 0;
+  }
+
+  10% {
+    stroke-dasharray: 2.3525em, 0.4705em;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 0.001em, 2.825em;
+    stroke-dashoffset: -2.826em;
+  }
+
+  60% {
+    stroke-dasharray: 0.001em, 2.825em;
+  }
+
+  to {
+    stroke-dasharray: 2.3525em, 0.4705em;
+    stroke-dashoffset: -2.826em;
+  }
+}
+

@@ -1,0 +1,323 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+
+  .inviteShow {
+    position: absolute;
+    top: calc(50% - 164px);
+    left: 15px;
+    transform: translateY(-50%);
+    width: fit-content;
+    height: 60px;
+    z-index: 999;
+
+    .van-cell {
+      background: unset;
+      padding: 0;
+      right: 0;
+    }
+
+    .van-image {
+      display: block;
+    }
+
+    .item {
+      padding: 1px;
+      font-size: 14px;
+      text-align: center;
+
+      .text {
+        padding: 3px;
+        color: #ff7d00;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.pkBoard {
+  width: 348px;
+  height: 264px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  backdrop-filter: blur(5px) contrast(.8);
+  background: hsla(0, 0%, 41.2%, .5);
+  box-shadow: 0 0 35px rgba(105, 100, 105, .5);
+}
+
+.pkTitle {
+  width: 100%;
+  height: 46px;
+  padding-left: 5px;
+  background: #fff;
+  display: flex;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  .subject {
+    flex: 1 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .icon {
+      width: 26px;
+      height: 26px;
+      margin: 10px 0;
+      background-image: url(@/assets/pk.png);
+      background-size: cover;
+      border: 1px solid #fff;
+    }
+
+    span {
+      width: fit-content;
+      line-height: 26px;
+      margin: 10px 0;
+      letter-spacing: 1px;
+      font-size: 18px;
+      color: #000;
+      display: block;
+      border: 1px solid #fff;
+
+      label {
+        font-size: 14px;
+        color: green;
+        letter-spacing: 0
+      }
+    }
+
+  }
+
+  .extends {
+    width: fit-content;
+    line-height: 26px;
+    color: #000;
+    display: block;
+    float: right;
+    text-align: right;
+    margin: 10px 24px 10px 0;
+    :global(.adm-badge-content) {
+      color: #fff;
+      box-sizing: border-box;
+      min-width: 25px;
+      font-size: 10px;
+      line-height: 11px;
+      white-space: nowrap;
+      font-weight: 400;
+      padding: 3px 5px;
+      text-align: center;
+    }
+  }
+}
+
+.pkLineItem {
+  width: 100%;
+  height: 50px;
+  margin-top: 19px;
+
+  .border {
+    height: 100%;
+    margin: 0 24px;
+    border-radius: 3px;
+    position: relative;
+
+    .firstTips {
+      width: 100%;
+      height: 50px;
+      position: absolute;
+      overflow: hidden;
+      text-align: center;
+
+      sup {
+        width: 50px;
+        padding: 8px;
+        position: absolute;
+        font-size: 10px;
+        white-space: nowrap;
+        top: 2px;
+        right: -15px;
+        transform: rotate(45deg);
+        color: #fff
+      }
+    }
+  }
+
+  .mask {
+    width: 100%;
+    height: 100%;
+
+    .content {
+      width: calc(100% - 50px);
+      height: 100%;
+      line-height: 100%;
+      background: rgba(0, 0, 0, .05);
+      margin: 0 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+  }
+
+  .title {
+    text-align: right;
+    color: #e6e600;
+    font-size: 15px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: 700
+  }
+
+  .titleLeft {
+    text-align: left;
+    color: #e6e600;
+    font-size: 15px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: 700
+  }
+
+  .name {
+    text-align: left;
+    vertical-align: bottom;
+    color: #00f400;
+    font-size: 15px;
+    height: 25px;
+    line-height: 25px
+  }
+
+  .score {
+    text-align: left;
+    color: #fff;
+    font-size: 15px;
+    height: 25px;
+    line-height: 25px
+  }
+
+  .scoreRight {
+    text-align: left;
+    color: #fff;
+    font-size: 15px;
+    padding-left: 7px;
+    height: 25px;
+    line-height: 25px
+  }
+
+  .timeout {
+    text-align: center;
+    color: #00f400;
+    font-size: 15px;
+    height: 25px;
+    line-height: 25px;
+
+    span {
+      font-size: 10px;
+      color: #dedede;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      padding: 0 2px;
+      margin-left: 2px;
+      display: block;
+      height: fit-content;
+      line-height: 14px
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 45px !important;
+    font-size: 15px;
+  }
+
+}
+
+.onlineHead {
+  position: sticky;
+}
+
+.onlineContent {
+  height: 40vh;
+  overflow-y: scroll;
+  padding: 0 15px;
+
+  :global(.adm-list-item-content-main) {
+    padding: 5px 0;
+  }
+
+  :global(.adm-list-body) {
+    &:first-child {
+      border-top: none;
+    }
+
+    height: 100%;
+  }
+
+  :global(.adm-list-body-inner), :global(.adm-list-default) {
+    height: 100%;
+  }
+
+  :global(.adm-list-body-inner) {
+    overflow: scroll;
+  }
+
+  .empty {
+    height: 100%;
+
+    :global(.adm-empty) {
+      height: 100%;
+    }
+  }
+
+  .content {
+    display: flex;
+    height: 24px;
+    line-height: 24px;
+
+    span {
+      font-size: 15px;
+      flex: 1 1;
+    }
+
+    .invite {
+      font-size: 13px;
+      color: red;
+      margin: 0 5px;
+    }
+
+    .status {
+      width: fit-content;
+      color: #24c824;
+      display: inline-block;
+      text-align: right;
+      margin: 0 5px;
+      font-size: 13px;
+    }
+  }
+
+  .desc {
+    text-align: left;
+    font-size: 13px;
+    height: 24px;
+    line-height: 24px;
+
+    .score {
+      width: fit-content;
+      color: #ff7000;
+
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+
+.floatingBubble :global(.adm-floating-bubble-button) {
+  overflow: visible;
+}

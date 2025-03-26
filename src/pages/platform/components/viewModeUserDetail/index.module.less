@@ -1,0 +1,98 @@
+.userDetail {
+  position: absolute;
+  width: 338px;
+  height: fit-content;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: #fbf6f5;
+  border-radius: 8px;
+  overflow: hidden;
+
+  .head {
+    width: 100%;
+    height: 128px;
+
+    .userIcon {
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      margin-left: -45px;
+      z-index: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid #eee;
+
+      .img {
+        width: 90px;
+        height: 90px;
+        display: block;
+      }
+
+      .imgPicker {
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-left: -45px;
+        z-index: 2
+      }
+    }
+
+    .close {
+      width: 42px;
+      height: 42px;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      div {
+        width: 30px;
+        height: 30px;
+        background-image: url(data:image/png;base64,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);
+        background-size: cover;
+        margin: 6px;
+      }
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 115px;
+      background: linear-gradient(90deg, #f1eefc, #9dc6ff 70%, #a5bcff);
+      border-radius: 8px 8px 50% 50%;
+    }
+
+
+  }
+
+  .score {
+    color: #e6e600
+  }
+
+  .battle {
+    height: 100%;
+
+    span {
+      display: inline-block;
+      padding-left: 5px;
+
+      &:first-child {
+        color: #ffc800;
+        padding-right: 5px
+      }
+
+      &:nth-child(2) {
+        color: #ff7000;
+        padding-right: 5px
+      }
+
+      &:nth-child(3) {
+        color: #87ebf1
+      }
+    }
+  }
+}

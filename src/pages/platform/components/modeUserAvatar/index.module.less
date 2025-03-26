@@ -1,0 +1,126 @@
+.userAvatar {
+  position: absolute;
+  width: 337.5px;
+  height: fit-content;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 8px;
+  backdrop-filter: blur(5px) contrast(.8);
+  background: hsla(0, 0%, 41.2%, .5);
+  box-shadow: 0 0 35px rgba(105, 100, 105, .5);
+
+  .title {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #b2aaaa;
+    background: #fff;
+  }
+
+  .head {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #b2aaaa;
+    position: relative;
+
+    .userIcon {
+      display: inline-block
+    }
+
+    .upload {
+      height: 15px;
+      line-height: 15px;
+      position: absolute;
+      bottom: 2px;
+      right: 15px;
+      z-index: 10;
+
+      span {
+        font-size: 12px;
+        color: #6aff0e;
+      }
+
+      .imgPicker {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        :global(.am-image-picker-list) {
+          padding: 0;
+          margin: 0;
+          height: 15px;
+          .am-flexbox .am-flexbox-item {
+            margin: 0
+          }
+
+        }
+
+      }
+    }
+  }
+
+  .avatar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 10px;
+    align-content: space-around;
+    justify-content: space-between;
+    border-bottom: 1px solid #b2aaaa;
+
+    .item {
+      width: 42px;
+      height: 42px;
+      margin: 5px;
+      border: 1px solid #eee;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .itemSelect {
+      width: 42px;
+      height: 42px;
+      margin: 5px;
+      box-shadow: 0 0 8px #ff5b05;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid #eee;
+    }
+
+  }
+
+  .btn {
+    width: 100%;
+    height: 38px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+
+    .tip {
+      width: fit-content;
+      height: 38px;
+      line-height: 55px;
+      color: #fff;
+      font-size: 12px;
+      padding-left: 10px
+    }
+
+    .selectBtn {
+      width: 65px;
+      height: 38px;
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+  }
+
+}
