@@ -120,9 +120,9 @@ importers:
       postcss-preset-env:
         specifier: ^10.1.5
         version: 10.1.5(postcss@8.5.3)
-      postcss-px-to-viewport:
-        specifier: ^1.1.1
-        version: 1.1.1
+      postcss-px-to-viewport-8-plugin:
+        specifier: ^1.2.5
+        version: 1.2.5
       vite:
         specifier: ^6.2.0
         version: 6.2.2(@types/node@22.13.10)(less@4.2.2)(terser@5.39.0)(yaml@2.7.0)
@@ -3358,8 +3358,8 @@ packages:
     peerDependencies:
       postcss: ^8.4
 
-  postcss-px-to-viewport@1.1.1:
-    resolution: {integrity: sha512-2x9oGnBms+e0cYtBJOZdlwrFg/mLR4P1g2IFu7jYKvnqnH/HLhoKyareW2Q/x4sg0BgklHlP1qeWo2oCyPm8FQ==}
+  postcss-px-to-viewport-8-plugin@1.2.5:
+    resolution: {integrity: sha512-+yc69+q/euV7iKh5fGXY6C/lpepmVx2DGFHeYj5BpzIFyBBpdACDjZyrZ8AV0kCg+J0bplBv4ZA1QTzgaK0rGg==}
 
   postcss-replace-overflow-wrap@4.0.0:
     resolution: {integrity: sha512-KmF7SBPphT4gPPcKZc7aDkweHiKEEO8cla/GjcBK+ckKxiZslIu3C4GCRW3DNfL0o7yW7kMQu9xlZ1kXRXLXtw==}
@@ -7934,10 +7934,9 @@ snapshots:
       postcss: 8.5.3
       postcss-selector-parser: 7.1.0
 
-  postcss-px-to-viewport@1.1.1:
+  postcss-px-to-viewport-8-plugin@1.2.5:
     dependencies:
       object-assign: 4.1.1
-      postcss: 8.5.3
 
   postcss-replace-overflow-wrap@4.0.0(postcss@8.5.3):
     dependencies:

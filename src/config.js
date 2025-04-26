@@ -29,7 +29,7 @@ const config = ({
 
   /** -- socket 相关配置 -- */
   // 服务器地址（http和socket共享一个地址，只能是http或https，禁用ws和wss）
-  // serviceUri: 'http://47.108.93.44:90',
+  serviceUri: 'https://chess.kpui.top',
   // serviceUri: '/',
   // 服务器指定的命名空间
   path: '/chinese-chess',

@@ -129,7 +129,7 @@ class RegisterView extends Component {
                 text: '提交',
                 onPress: (value) => {
                   playSound(btnSound)
-                  if (value.length) {
+                  if (value.length === 0) {
                     Toast.show('验证码错误')
                   }
                   else {
