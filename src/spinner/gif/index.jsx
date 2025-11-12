@@ -6,7 +6,7 @@ const loading = 'data:image/gif;base64,R0lGODlhIANYAsQQAB9MWQCzn/9ZVP+wYCC9q//Xr
 function Gif(props) {
   return (
     <div>
-      {/* eslint-disable-next-line react/prefer-destructuring-assignment */}
+      { }
       <img alt="gif" style={{ width: props.width, height: props.height }} src={loading} />
     </div>
   )

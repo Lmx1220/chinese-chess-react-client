@@ -1,3 +1,8 @@
+import { Dialog, Grid, Toast } from 'antd-mobile'
+import { Modal } from 'antd-mobile-v2'
+import ClipboardJS from 'clipboard'
+import { merge } from 'lodash'
+import React from 'react'
 import backImg from '@/assets/back.png'
 import AdvancedBtn from '@/button/index.jsx'
 import { show } from '@/circle/index.js'
@@ -29,11 +34,6 @@ import {
   playSound,
   startSound,
 } from '@/utils/sounds-res.js'
-import { Dialog, Grid, Toast } from 'antd-mobile'
-import { Modal } from 'antd-mobile-v2'
-import ClipboardJS from 'clipboard'
-import { merge } from 'lodash'
-import React from 'react'
 import { moveSound } from '../../../utils/sounds-res.js'
 
 class ReviewBoard extends React.Component {

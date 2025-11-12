@@ -1,10 +1,3 @@
-import onlineUserImg from '@/assets/onlineUser.png'
-import AdvancedBtn from '@/button/index.jsx'
-import config from '@/config.js'
-import { ROOM_JOIN_TYPE, USER_STATUS } from '@/enums.js'
-import SocketEvent, { sleep } from '@/service/event.js'
-import { dateDiffSeconds } from '@/utils/dateUtil.js'
-import { btnSound, playSound } from '@/utils/sounds-res.js'
 import {
   Badge,
   Button,
@@ -19,6 +12,13 @@ import {
   Toast,
 } from 'antd-mobile'
 import { Component } from 'react'
+import onlineUserImg from '@/assets/onlineUser.png'
+import AdvancedBtn from '@/button/index.jsx'
+import config from '@/config.js'
+import { ROOM_JOIN_TYPE, USER_STATUS } from '@/enums.js'
+import SocketEvent, { sleep } from '@/service/event.js'
+import { dateDiffSeconds } from '@/utils/dateUtil.js'
+import { btnSound, playSound } from '@/utils/sounds-res.js'
 import styles from './index.module.less'
 
 class PlayerRandom extends Component {

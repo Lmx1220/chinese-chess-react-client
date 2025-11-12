@@ -1,10 +1,10 @@
+import { Form, Grid, Input, Toast } from 'antd-mobile'
+import { Component } from 'react'
 import AdvancedBtn from '@/button/index.jsx'
 import SocketEvent from '@/service/event.js'
 import AdvancedSpin from '@/spinner/index.jsx'
 import { encryptByMd5 } from '@/utils/cipher.js'
 import { btnSound, playSound } from '@/utils/sounds-res.js'
-import { Form, Grid, Input, Toast } from 'antd-mobile'
-import { Component } from 'react'
 import style from './index.module.less'
 
 class ForgetPasswordView extends Component {

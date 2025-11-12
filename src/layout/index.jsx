@@ -1,8 +1,9 @@
-import { btnSound, playSound } from '@/utils/sounds-res.js'
 import { Dialog } from 'antd-mobile'
 import qrcode from 'qrcode'
 import React from 'react'
 import { UAParser } from 'ua-parser-js'
+import config from '@/config'
+import { btnSound, playSound } from '@/utils/sounds-res.js'
 import styles from './index.module.less'
 
 class BasicLayout extends React.Component {
@@ -45,13 +46,17 @@ class BasicLayout extends React.Component {
     this.setState({ isMobile, ua })
     Dialog.clear()
     if (!isMobile) {
+      if (!config.debug) {
+        // window.open('/pc.html')
+        window.location.pathname = '/pc.html'
+      }
       const qrCodeUrl = await qrcode.toDataURL('url')
       Dialog.alert({
         title: '',
         content: (
           <div className={styles.qrcodeWrap}>
             <img src={qrCodeUrl} className={styles.qrcode}></img>
-            <span>请使用手机扫码体验</span>
+            <span>请使用手机扫码体验,更好!!!</span>
           </div>
         ),
 
@@ -65,6 +70,7 @@ class BasicLayout extends React.Component {
     const { ua } = this.state
     const screenWidth = document.documentElement.clientWidth
     const screenHeight = document.documentElement.clientHeight
+
     return (
       <div className={styles.support}>
         <div className={styles.wrap}>

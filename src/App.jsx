@@ -1,6 +1,6 @@
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Home from '@/pages/index.jsx'
 import Shared from '@/pages/share/index.jsx'
-import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Layout from './layout/index'
 
 function NotFoundRedirect() {

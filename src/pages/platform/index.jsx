@@ -1,11 +1,11 @@
+import { Badge, Ellipsis, Image, Toast } from 'antd-mobile'
+import { Component } from 'react'
 import { USER_TYPE } from '@/enums.js'
 import ModeUserAvatar from '@/pages/platform/components/modeUserAvatar/index.jsx'
 import SocketEvent from '@/service/event.js'
 import AdvancedSpin from '@/spinner/index.jsx'
 import { CACHE_BATTLE_KEY } from '@/utils/cache-key-utils.js'
 import { btnSound, playSound } from '@/utils/sounds-res.js'
-import { Badge, Ellipsis, Image, Toast } from 'antd-mobile'
-import { Component } from 'react'
 import ViewModeUserDetail from './components/viewModeUserDetail/index.jsx'
 import style from './index.module.less'
 

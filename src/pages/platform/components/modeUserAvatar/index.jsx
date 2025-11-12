@@ -1,12 +1,12 @@
+import { Image as AntImage, CenterPopup, Toast } from 'antd-mobile'
+import { ImagePicker } from 'antd-mobile-v2'
+import { Component } from 'react'
 import AdvancedBtn from '@/button/index.jsx'
 import SocketEvent from '@/service/event.js'
 import AdvancedSpin from '@/spinner/index.jsx'
 import { CACHE_BATTLE_KEY } from '@/utils/cache-key-utils.js'
 import { avatarList } from '@/utils/images-res.js'
 import { btnSound, playSound } from '@/utils/sounds-res.js'
-import { Image as AntImage, CenterPopup, Toast } from 'antd-mobile'
-import { ImagePicker } from 'antd-mobile-v2'
-import { Component } from 'react'
 import styles from './index.module.less'
 
 class ModeUserAvatar extends Component {

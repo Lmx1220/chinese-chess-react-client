@@ -1,5 +1,5 @@
-import config from '@/config.js'
 import { Howl } from 'howler'
+import config from '@/config.js'
 import background from '../assets/sounds/background.mp3'
 import btn from '../assets/sounds/btn.mp3'
 import capture from '../assets/sounds/capture.mp3'

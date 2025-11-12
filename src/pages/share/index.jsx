@@ -1,3 +1,8 @@
+import { Dialog, Grid, Toast } from 'antd-mobile'
+import { merge } from 'lodash'
+import React from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
+import req from 'umi-request'
 import AdvancedBtn from '@/button/index.jsx'
 import { show } from '@/circle/index.js'
 import config from '@/config.js'
@@ -24,11 +29,6 @@ import {
   peopleEatSound,
   playSound,
 } from '@/utils/sounds-res.js'
-import { Dialog, Grid, Toast } from 'antd-mobile'
-import { merge } from 'lodash'
-import React from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import req from 'umi-request'
 
 const aes = new AesEncryption()
 function withRouter(Component) {

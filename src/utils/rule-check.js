@@ -1,7 +1,7 @@
+import { Toast } from 'antd-mobile'
 import { getValidMoves, updateArrayWithNewPosition } from '@/utils/board-canvas-utils.js'
 import { basicRule } from '@/utils/rules/basic-rule.js'
 import { isMovementValid, isStalemateAtBoss } from '@/utils/rules/boss-rule.js'
-import { Toast } from 'antd-mobile'
 
 export function validateMovement(gameStateStr, isBlackColor, newPosition) {
   const gameState = JSON.parse(gameStateStr)

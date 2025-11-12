@@ -1,11 +1,11 @@
+import { Image, NavBar, PullToRefresh, Toast } from 'antd-mobile'
+import { ListView } from 'antd-mobile-v2'
+import React from 'react'
 import noDataImg from '@/assets/no-data.png'
 import WatchBoard from '@/pages/watch/board'
 import styles from '@/pages/watch/index.module.less'
 import SocketEvent from '@/service/event'
 import { btnSound, playSound } from '@/utils/sounds-res'
-import { Image, NavBar, PullToRefresh, Toast } from 'antd-mobile'
-import { ListView } from 'antd-mobile-v2'
-import React from 'react'
 // import { findDOMNode } from 'react-dom'
 
 /**

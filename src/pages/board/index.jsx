@@ -1,3 +1,6 @@
+import { Dialog, Toast } from 'antd-mobile'
+import lodash from 'lodash'
+import { Component } from 'react'
 import { show } from '@/circle/index.js'
 import config from '@/config.js'
 import { GAME_OVER_TYPE } from '@/enums.js'
@@ -47,9 +50,6 @@ import {
   startSound,
   winSound,
 } from '@/utils/sounds-res.js'
-import { Dialog, Toast } from 'antd-mobile'
-import lodash from 'lodash'
-import { Component } from 'react'
 import styles from './index.module.less'
 
 class BoardView extends Component {

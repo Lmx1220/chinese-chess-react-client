@@ -1,3 +1,6 @@
+import { Form, Grid, Input, Toast } from 'antd-mobile'
+import { Modal } from 'antd-mobile-v2'
+import { Component } from 'react'
 import AdvancedBtn from '@/button/index.jsx'
 import { USER_TYPE } from '@/enums.js'
 import SocketEvent from '@/service/event.js'
@@ -8,9 +11,6 @@ import {
 import { encryptByMd5 } from '@/utils/cipher.js'
 import { btnSound, playSound } from '@/utils/sounds-res.js'
 import { setItem } from '@/utils/storage-utils.js'
-import { Form, Grid, Input, Toast } from 'antd-mobile'
-import { Modal } from 'antd-mobile-v2'
-import { Component } from 'react'
 import style from './index.module.less'
 
 class RegisterView extends Component {

@@ -1,7 +1,7 @@
-import config from '@/config.js'
-import { AesEncryption } from '@/utils/cipher.js'
 import FingerprintJS from '@fingerprintjs/fingerprintjs'
 import { io } from 'socket.io-client'
+import config from '@/config.js'
+import { AesEncryption } from '@/utils/cipher.js'
 
 class SocketUtils {
   static getSocket() {

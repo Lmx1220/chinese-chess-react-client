@@ -1,11 +1,11 @@
+import { NavBar, Toast } from 'antd-mobile'
+import { ListView } from 'antd-mobile-v2'
+import React from 'react'
 import noDataImg from '@/assets/no-data.png'
 import ReviewBoard from '@/pages/review/board/index'
 import styles from '@/pages/review/index.module.less'
 import SocketEvent from '@/service/event.js'
 import { btnSound, playSound } from '@/utils/sounds-res.js'
-import { NavBar, Toast } from 'antd-mobile'
-import { ListView } from 'antd-mobile-v2'
-import React from 'react'
 
 // 假设这些是从其他文件导入的模块，需要根据实际情况修改路径
 

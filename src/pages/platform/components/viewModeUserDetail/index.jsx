@@ -1,11 +1,11 @@
-import SocketEvent from '@/service/event.js'
-import AdvancedSpin from '@/spinner/index.jsx'
-import { CACHE_BATTLE_KEY } from '@/utils/cache-key-utils.js'
-import { btnSound, playSound } from '@/utils/sounds-res.js'
 import { Dialog, Image, List, Space, Toast } from 'antd-mobile'
 import { ImagePicker, Modal } from 'antd-mobile-v2'
 import ClipboardJS from 'clipboard'
 import { Component } from 'react'
+import SocketEvent from '@/service/event.js'
+import AdvancedSpin from '@/spinner/index.jsx'
+import { CACHE_BATTLE_KEY } from '@/utils/cache-key-utils.js'
+import { btnSound, playSound } from '@/utils/sounds-res.js'
 import styles from './index.module.less'
 
 class ViewModeUserDetail extends Component {

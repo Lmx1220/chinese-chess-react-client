@@ -1,7 +1,7 @@
-import { log } from '@/utils/log-utils.js'
 // import ReactDOM from 'react-dom'
 import { createRoot } from 'react-dom/client'
 import { loadingFadeOut } from 'virtual:app-loading'
+import { log } from '@/utils'
 import App from './App.jsx'
 import 'antd-mobile-v2/dist/antd-mobile.css'
 import './index.less'

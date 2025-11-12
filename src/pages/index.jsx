@@ -1,3 +1,5 @@
+import { Button, Card, Dialog, FloatingPanel, Image, List, Toast } from 'antd-mobile'
+import { Component } from 'react'
 import config from '@/config.js'
 import { ROOM_JOIN_TYPE } from '@/enums.js'
 import Board from '@/pages/board/index.jsx'
@@ -10,8 +12,6 @@ import SocketEvent from '@/service/event.js'
 import SocketUtils from '@/service/socket.js'
 import AdvancedSpin from '@/spinner/index.jsx'
 import { btnSound, pauseAllSound, playSound, startAllSound } from '@/utils/sounds-res.js'
-import { Button, Card, Dialog, FloatingPanel, Image, List, Toast } from 'antd-mobile'
-import { Component } from 'react'
 import style from './index.module.less'
 
 class Home extends Component {

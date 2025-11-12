@@ -1,7 +1,7 @@
+import { Component } from 'react'
 import backImg from '@/assets/back.png'
 import AdvancedSpin from '@/spinner/index.jsx'
 import { backgroundSound, btnSound, playSound } from '@/utils/sounds-res.js'
-import { Component } from 'react'
 import style from './index.module.less'
 
 class VersionView extends Component {

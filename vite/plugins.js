@@ -8,7 +8,7 @@ import { loadEnv } from 'vite'
 import Archiver from 'vite-plugin-archiver'
 import { compression } from 'vite-plugin-compression2'
 
-export default function createVitePlugins(mode, isBuild = false) {
+export default function createVitePlugins(mode, _isBuild = false) {
   const viteEnv = loadEnv(mode, process.cwd())
   const vitePlugins = [
     react(),
@@ -16,10 +16,13 @@ export default function createVitePlugins(mode, isBuild = false) {
       targets: ['defaults', 'not IE 11'],
     }),
     // https://github.com/nonzzz/vite-plugin-compression
-    isBuild && viteEnv.VITE_BUILD_COMPRESS.split(',').includes('gzip') && compression(),
-    isBuild && viteEnv.VITE_BUILD_COMPRESS.split(',').includes('brotli') && compression({
+    viteEnv.VITE_BUILD_COMPRESS && compression({
+      threshold: 10240,
       exclude: [/\.(br)$/, /\.(gz)$/],
-      algorithm: 'brotliCompress',
+      algorithms: viteEnv.VITE_BUILD_COMPRESS.split(',').map(item => ({
+        gzip: 'gzip',
+        brotli: 'brotliCompress',
+      }[item])),
     }),
 
     viteEnv.VITE_BUILD_ARCHIVE && Archiver({
@@ -55,12 +58,12 @@ export default function createVitePlugins(mode, isBuild = false) {
   return vitePlugins
 }
 
-async function getAppLoadingHtml(filePath = 'loading.html') {
+function getAppLoadingHtml(filePath = 'loading.html') {
   let appLoadingHtmlPath = path.join(process.cwd(), filePath)
   if (!fs.existsSync(appLoadingHtmlPath)) {
     appLoadingHtmlPath = url.fileURLToPath(new URL('../loading.html', import.meta.url))
   }
-  return await fs.readFileSync(appLoadingHtmlPath, 'utf8')
+  return fs.readFileSync(appLoadingHtmlPath, 'utf8')
 }
 
 export function createAppLoadingPlugin(appLoadingHtmlPath) {
@@ -95,7 +98,7 @@ export function createAppLoadingPlugin(appLoadingHtmlPath) {
     enforce: 'pre',
     transformIndexHtml: {
       handler: async html => html.replace(/<\/body>/, `${
-        `<div data-app-loading style="position: fixed; top: 0; left: 0; z-index: 10000; width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; user-select: none;">${await getAppLoadingHtml(appLoadingHtmlPath)}</div>`
+        `<div data-app-loading style="position: fixed; top: 0; left: 0; z-index: 10000; width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; user-select: none;">${getAppLoadingHtml(appLoadingHtmlPath)}</div>`
       }</body>`),
       order: 'pre',
     },

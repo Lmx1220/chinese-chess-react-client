@@ -1,3 +1,6 @@
+import { Dialog, Form, Grid, Input, Toast } from 'antd-mobile'
+import { Modal } from 'antd-mobile-v2'
+import { Component } from 'react'
 import qqImg from '@/assets/qq.png'
 import visitorImg from '@/assets/visitor.png'
 import AdvancedBtn from '@/button/index.jsx'
@@ -15,9 +18,6 @@ import {
 import { encryptByMd5 } from '@/utils/cipher.js'
 import { btnSound, playSound } from '@/utils/sounds-res.js'
 import { getItem, removeItem, setItem } from '@/utils/storage-utils.js'
-import { Dialog, Form, Grid, Input, Toast } from 'antd-mobile'
-import { Modal } from 'antd-mobile-v2'
-import { Component } from 'react'
 import style from './index.module.less'
 
 class LoginView extends Component {

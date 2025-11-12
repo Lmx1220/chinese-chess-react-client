@@ -35,7 +35,6 @@ AdvancedBtn.propTypes = {
   disabled: PropTypes.bool,
 }
 
-// eslint-disable-next-line react/no-default-props
 AdvancedBtn.defaultProps = {
   type: 'normal',
   text: '名称',

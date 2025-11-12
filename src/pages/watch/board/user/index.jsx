@@ -1,3 +1,7 @@
+import { Dialog, Grid, Image, Toast } from 'antd-mobile'
+import { ActionSheet, Modal } from 'antd-mobile-v2'
+import NoSleep from 'nosleep.js'
+import { Component } from 'react'
 import chatImg from '@/assets/chat.png'
 import chatHistoryImg from '@/assets/chatHistory.png'
 import noSleepTextImg from '@/assets/noSleepText.png'
@@ -11,10 +15,6 @@ import { formatTime } from '@/utils/board-canvas-utils.js'
 import { CACHE_BATTLE_KEY } from '@/utils/cache-key-utils.js'
 import { changeSkin } from '@/utils/map-res.js'
 import { btnSound, playSound } from '@/utils/sounds-res.js'
-import { Dialog, Grid, Image, Toast } from 'antd-mobile'
-import { ActionSheet, Modal } from 'antd-mobile-v2'
-import NoSleep from 'nosleep.js'
-import { Component } from 'react'
 import styles from './index.module.less'
 
 class WatchBoardUser extends Component {

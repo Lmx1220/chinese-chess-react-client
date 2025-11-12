@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/kpu.svg"/>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+  <style>
+    body {
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    iframe {
+      min-width: 375px;
+      max-width: 100%;
+      min-height: 667px;
+      height: 100%;
+      background-color: #fff;
+      box-sizing: border-box;
+      border: none;
+    }
+
+    @media screen and (min-width: 450px) {
+      iframe {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        border: 1px solid #f5f5f5;
+        border-radius: 4px;
+      }
+    }
+
+  </style>
+  <script>
+    // window.onload = function () {
+    /* 监听电脑浏览器窗口尺寸改变 */
+    if (window.innerWidth <= 500) {
+      window.location.pathname = '/';
+    }
+    // 获取 iframe 元素的引用（关键：用于验证消息来源）
+    // const childIframe = document.querySelector('iframe');
+    // const childWindow = childIframe.contentWindow; // 子窗口的 window 对象
+
+    // 监听子窗口发送的消息
+    window.addEventListener('message', (e) => {
+      // 验证消息来源：确保消息来自目标子窗口（防止恶意网站伪造消息）
+      // if (e.source !== childWindow) return;
+
+      if (e.data.event && e.data.key) {
+        let value;
+        if (e.data.event === 'verify') {
+          value = true
+        }
+        // 3. 向子窗口回传消息（包含 value）
+        e.source.postMessage({
+          event: e.data.event,
+          key: e.data.key,
+          value
+        }, e.origin);
+      }
+    });
+    // };
+  </script>
+</head>
+<body>
+<iframe src="/"></iframe>
+</body>
+</html>

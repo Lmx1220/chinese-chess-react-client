@@ -48,7 +48,7 @@ const config = ({
 
   /** -- QQ登录 相关配置 -- */
   APP_ID: 102006686,
-  LOGIN_CALL_PATH: 'http://47.108.93.44:88/',
+  LOGIN_CALL_PATH: 'https://chess.kpui.top:88/',
   GET_USER_INFO: 'https://graph.qq.com/user/get_user_info',
   QQ_OAUTH_URI: 'https://graph.qq.com/oauth2.0/authorize',
 })

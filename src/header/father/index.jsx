@@ -45,7 +45,6 @@ SubjectHeaderLayout.propTypes = {
   text: PropTypes.string,
 }
 
-// eslint-disable-next-line react/no-default-props
 SubjectHeaderLayout.defaultProps = {
   text: '主标题',
 }

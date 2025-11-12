@@ -27,7 +27,6 @@ ChildTitleLayout.propTypes = {
   text: PropTypes.string,
 }
 
-// eslint-disable-next-line react/no-default-props
 ChildTitleLayout.defaultProps = {
   text: '副标题',
 }

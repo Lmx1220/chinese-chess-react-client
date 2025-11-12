@@ -1,19 +1,19 @@
+import { Badge, Dialog, Grid, Image, Toast } from 'antd-mobile'
+import { ActionSheet, Modal } from 'antd-mobile-v2'
+import { Component } from 'react'
 import backMoveImg from '@/assets/backMove.png'
 import chatImg from '@/assets/chat.png'
 import chatHistoryImg from '@/assets/chatHistory.png'
 import failImg from '@/assets/fail.png'
 import peaceImg from '@/assets/peace.png'
 import skinImg from '@/assets/skin.png'
+
 import AdvancedBtn from '@/button/index.jsx'
 import config from '@/config.js'
 import SocketEvent from '@/service/event.js'
-
 import { formatTime } from '@/utils/board-canvas-utils.js'
 import { changeSkin } from '@/utils/map-res.js'
 import { btnSound, messageSound, playSound } from '@/utils/sounds-res.js'
-import { Badge, Dialog, Grid, Image, Toast } from 'antd-mobile'
-import { ActionSheet, Modal } from 'antd-mobile-v2'
-import { Component } from 'react'
 import styles from './index.module.less'
 
 class PlayerBoardUser extends Component {

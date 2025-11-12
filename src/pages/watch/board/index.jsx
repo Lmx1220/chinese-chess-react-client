@@ -1,3 +1,6 @@
+import { Toast } from 'antd-mobile'
+import lodash from 'lodash'
+import React from 'react'
 import { show } from '@/circle/index.js'
 import { GAME_OVER_TYPE } from '@/enums.js'
 import styles from '@/pages/watch/board/index.module.less'
@@ -19,9 +22,6 @@ import {
   playSound,
   startSound,
 } from '@/utils/sounds-res.js'
-import { Toast } from 'antd-mobile'
-import lodash from 'lodash'
-import React from 'react'
 
 /**
  * 观战棋盘

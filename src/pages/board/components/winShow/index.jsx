@@ -1,7 +1,7 @@
-import AdvancedBtn from '@/button/index.jsx'
-import { btnSound, playSound } from '@/utils/sounds-res.js'
 import { Grid } from 'antd-mobile'
 import { Component } from 'react'
+import AdvancedBtn from '@/button/index.jsx'
+import { btnSound, playSound } from '@/utils/sounds-res.js'
 import styles from './index.module.less'
 
 class WinShow extends Component {
